@@ -12,4 +12,4 @@
 This is a personal warm-up of mine prior to setting up development environment and getting hang of the tech mentioned above. Feel free to checkout my code, and/or try out the demo!
 
 ## Build it locally
-Simply gather all the repo files in your local directory, run npm install which will cost you at about 250mb alone, then use the command npm run dev to host it locally.
+Simply gather all the repo files in your local directory, run `npm install` which will cost you at about 250mb alone, then use the command `npm run dev` to host it locally.
