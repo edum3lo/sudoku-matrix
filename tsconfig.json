@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
+    ],
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "../node_modules/@types"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,9 +24,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "watch": true
   },
   "include": [
-    "src"
-  ]
+    "src/index.tsx"
+  ],
 }

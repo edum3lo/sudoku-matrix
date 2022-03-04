@@ -1,0 +1,54 @@
+.board-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 630px;
+}
+
+.app-container {
+  overflow: hidden;
+  border-radius: 70px;
+  border: solid 1px black;
+}
+
+.cell {
+  font-size: 40px;
+  text-align: center;
+  box-sizing: border-box;
+  outline: solid 1px black;
+  border-radius: 0px;
+  height: 70px;
+  width: 70px;
+}
+
+button {
+  font-size: 25px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  color: whitesmoke;
+  background-color: #888;
+  border: solid 1px black;
+  border-radius: 0px;
+  height: 70px;
+}
+
+.solve-button {
+  width: 490px;
+}
+
+.tool-button {
+  width: 70px;
+}
+
+button:hover {
+  filter: brightness(110%);
+  cursor: pointer;
+}
+
+button:active {
+  font-size: 20px
+}
+
+.button-div {
+  display: flex;
+  width: 630px
+}
