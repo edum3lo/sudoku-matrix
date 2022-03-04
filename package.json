@@ -13,6 +13,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "^5.0.0",
     "serve": "^13.0.2",
+    "ts-node": "^10.6.0",
     "typescript": "^4.6.2",
     "web-vitals": "^2.1.4"
   },
@@ -22,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "ts-start": "ts-node server.ts"
   },
   "eslintConfig": {
     "extends": [
