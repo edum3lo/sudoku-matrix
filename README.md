@@ -8,7 +8,7 @@
 <img src="https://github.com/suntoes/sudoku-matrix/blob/master/public/banner.png" alt="gameplay" width="400"/>
 </a>
 
-## My newbie approach to React + TypeScript
+## My approach to React + TypeScript
 This is a personal warm-up of mine prior to setting up development environment and getting hang of the tech mentioned above. Feel free to checkout my code, and/or try out the demo!
 
 ## Build it locally
