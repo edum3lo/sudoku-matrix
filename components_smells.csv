@@ -1,0 +1,5 @@
+id,file,Component,Smell,Details,"Em uma escala de 1 a 5, como você avalia a relevância desse smell?
+1 = smell não é importante e, provavelmente, não será refatorado
+5 = smell é muito importante e, provavelmente, será refatorado em breve.",Observação
+1,C:\Program Files\projects\sudoku-matrix\src\index.tsx,SudokuSolver,Large Component,LOC: 135; Number of props: 4; Number of attributes: 0; Number of methods: 11,,
+2,C:\Program Files\projects\sudoku-matrix\src\index.tsx,SudokuSolver,JSX outside the render method,"Methods with JSX: updateCell,updateColor,fancyResetColor,isValid,sudokuSolver,solveInput,handleInput,cleanInput,randomInput",,

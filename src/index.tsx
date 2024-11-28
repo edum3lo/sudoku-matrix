@@ -11,29 +11,31 @@ class Board extends React.Component<any, BoardState> {
     return boardC[colIndex][rowIndex] === 0 ? 'solid 5px #f76363' : boardC[colIndex][rowIndex] === 1 ? 'solid 5px #5ced89' : 'solid 1px black'
   }
 
-  renderInput(colIndex:number, rowIndex:number, rowItem:any) {
-    return <input
-      key={`${colIndex}${rowIndex}`}
-      className="cell"
-      value={rowItem === 0 ? '' : rowItem}
-      maxLength={1}
-      type="text"
-      onInput={(e:any) => {
-        this.props.onInput(e.target.value, colIndex, rowIndex)
-      }}
-      style={{
-        backgroundColor: boardIndexesToGray.some((val: number) => (val === Number(`${colIndex}${rowIndex}`) || val === Number(`${colIndex}${rowIndex}`)-1 || val === Number(`${colIndex}${rowIndex}`) - 2)) ? '#dbdbdb' : '#f7f7f7',
-        border: this.fancyBorder(colIndex, rowIndex)
-      }}
-    />
-  }
-
   render() {
+    const renderInput = (colIndex:number, rowIndex:number, rowItem:any) => {
+      return (
+        <input
+          key={`${colIndex}${rowIndex}`}
+          className="cell"
+          value={rowItem === 0 ? '' : rowItem}
+          maxLength={1}
+          type="text"
+          onInput={(e:any) => {
+            this.props.onInput(e.target.value, colIndex, rowIndex)
+          }}
+          style={{
+            backgroundColor: boardIndexesToGray.some((val: number) => (val === Number(`${colIndex}${rowIndex}`) || val === Number(`${colIndex}${rowIndex}`)-1 || val === Number(`${colIndex}${rowIndex}`) - 2)) ? '#dbdbdb' : '#f7f7f7',
+            border: this.fancyBorder(colIndex, rowIndex)
+          }}
+        />
+      );
+    };
+
     return (
       <div className="board-wrap">
         {this.props.boardValue
           .map((column: Array<Array<any>>, colIndex:number) => column
-            .map((rowItem, rowIndex:number) => this.renderInput(colIndex, rowIndex, rowItem))
+            .map((rowItem, rowIndex:number) => renderInput(colIndex, rowIndex, rowItem))
           )
         }
       </div>
@@ -177,10 +179,7 @@ class SudokuSolver extends React.Component<{}, BoardState> {
   }
 }
   
-  // ======================================== //
-  
-  ReactDOM.render(
-    <SudokuSolver />,
-    document.getElementById('root')
-  );
-  
+ReactDOM.render(
+  <SudokuSolver />,
+  document.getElementById('root')
+);
